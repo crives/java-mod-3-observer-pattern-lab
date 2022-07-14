@@ -32,9 +32,25 @@ public class HotelManager {
 
         //  Give each room on each floor a unique sequential number.
         hotel.numberRoomsOnEachFloor();
+
         hotel.createEmailNotificationServices();
 
         //  Check 4 different guests in (you can hardcode which room they check into).
+        HotelRoom carolinesRoom = new HotelRoom();
+        carolinesRoom.setRoomNum(101);
+        carolinesRoom.checkIn("Caroline");
+
+        HotelRoom mahdisRoom = new HotelRoom();
+        mahdisRoom.setRoomNum(102);
+        mahdisRoom.checkIn("Mahdis");
+
+        HotelRoom jaysRoom = new HotelRoom();
+        jaysRoom.setRoomNum(201);
+        jaysRoom.checkIn("Thomas");
+
+        HotelRoom thomasRoom = new HotelRoom();
+        thomasRoom.setRoomNum(202);
+        thomasRoom.checkIn("Thomas");
 
         // Use the output of your program to demonstrate that the emails and push
         // notifications are handled appropriately upon check-in.

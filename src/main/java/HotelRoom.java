@@ -21,7 +21,11 @@ class HotelRoom implements HotelRoomInterface {
 
     public void checkIn(String guestName) {
         this.guestName = guestName;
-        Logger.getInstance().log(guestName + "checked in");
+        String update = guestName + "checked in";
+        Logger.getInstance().log(update);
+        // For each observer in list of observers
+        // call update
+        checkinObservers.forEach((observer) -> observer.update(update));
     }
 
     public void addCheckinObserver(RoomCheckinObserver checkinObserver) {
